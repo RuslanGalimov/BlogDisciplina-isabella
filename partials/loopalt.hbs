@@ -1,0 +1,36 @@
+<article id="posts" class="{{post_class}}">
+    <div class="masorny">
+        {{#foreach posts}}<section class="post{{#if featured}} featured{{/if}}" id="post-{{id}}">
+          <div class="post--container">
+            <div class="post--header">
+              {{#if author.image}}<img class="avatar" src="{{author.image}}" alt="{{author.name}}" nopin="nopin" />{{/if}}
+              <div>
+                <div class="tags">
+                    {{#if tags}}
+                      {{#foreach tags}}
+                          <a href="{{url}}" title="{{name}}" class="tag-{{id}}">#{{name}}</a>
+                      {{/foreach}}
+                      <span class="dot-sep"></span>
+                    {{/if}}
+                </div>
+                <time class="date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
+              </div>
+              <h1 class="title"><a href="{{url}}">{{{title}}}</a></h1>
+            </div>
+            {{#if image}}
+        		<figure class="post--cover">
+              <a class="anchor article" href="{{url}}">
+    		        <img src="{{image}}" alt="{{{title}}}">
+              </a>
+        		</figure>
+            {{else}}
+            {{content characters="250"}}
+          	{{/if}}
+            <div class="post--foot">
+              <a href="{{url}}#diqus" class="anchor comments"><i class="fa fa-comment"></i> 23</a>
+              <a class="anchor article" href="{{url}}">read more <i class="fa fa-chevron-right"></i></a>
+            </div>
+          </div>
+        </section>{{/foreach}}
+    </div>
+</article>

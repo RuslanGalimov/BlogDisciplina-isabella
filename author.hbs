@@ -1,0 +1,9 @@
+{{!< default}}
+{{#author}}
+<div class="wrapper">
+  <div class="writedposts">
+    <h2 class="name">{{name}}</h2> <h2 class="total">{{plural ../pagination.total empty='No posts' singular='% Article' plural='% Articles'}}</h2>
+  </div>
+</div>
+{{/author}}
+{{> loop}}

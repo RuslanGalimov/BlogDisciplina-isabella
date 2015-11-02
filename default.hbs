@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
+
+    {{! Styles'n'Scripts }}
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{{asset "css/zoom.min.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/isabella.min.css"}}" />
+
+    {{! Ghost outputs important style and meta data with this tag }}
+    {{ghost_head}}
+</head>
+<body class="{{body_class}}">
+
+  {{! Everything else gets inserted here }}
+  {{> header}}
+
+  <main id="main">
+
+    {{{body}}}
+
+  </main>
+
+
+  {{> footer}}
+  {{! Ghost outputs important scripts and data with this tag }}
+  {{ghost_foot}}
+
+  <script type="text/javascript" src="{{asset "js/jquery-1.11.3.min.js"}}"></script>
+  {{#is "home, index, tag, author"}}
+  <script type="text/javascript" src="{{asset "js/masonry.pkgd.min.js"}}"></script>
+  <script type="text/javascript" src="{{asset "js/imagesloaded.min.js"}}"></script>
+  {{/is}}
+
+  {{^is "post, page"}}
+  <script type="text/javascript" src="{{asset "js/jribbble.min.js"}}"></script>
+  <script type="text/javascript" src="{{asset "js/instafeed.min.js"}}"></script>
+  {{/is}}
+
+  {{#is "post"}}
+  <script type="text/javascript" src="{{asset "js/zoom.min.js"}}"></script>
+  <script type="text/javascript" src="{{asset "js/transition.min.js"}}"></script>
+  {{/is}}
+  <script type="text/javascript" src="{{asset "js/isabella.min.js"}}"></script>
+
+
+  {{!> disqus_count}}
+
+
+
+</body>
+</html>

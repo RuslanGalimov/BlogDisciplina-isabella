@@ -1,0 +1,48 @@
+{{!< default}}
+
+{{#post}}
+<div class="wrapper">
+  <article id="post" class="{{post_class}}">
+    <section class="post{{#if featured}} featured{{/if}}" id="post-{{id}}">
+      <div class="post--container">
+        <div>
+          <div class="post--header">
+            {{#if author.image}}<img class="avatar" src="{{author.image}}" alt="{{author.name}}" nopin="nopin" />{{/if}}
+
+            <div class="tags">
+              {{#if tags}}
+                {{#foreach tags}}
+                    <a href="{{url}}" title="{{name}}" class="tag-{{id}}">#{{name}}</a>
+                {{/foreach}}
+                 <span class="dot-sep"></span>
+              {{/if}}
+            </div>
+            <time class="date" datetime="{{date format='ll'}}">{{date format="ll"}}</time>
+
+            <h1 class="title"><a href="{{url}}">{{{title}}}</a></h1>
+          </div>
+          {{#if image}}
+          <figure class="post--cover">
+            <img src="{{image}}" alt="{{{title}}}">
+          </figure>
+          {{/if}}
+          <div class="post-content">
+            {{content}}
+          </div>
+        </div><div class="aside">
+          {{> aside}}
+        </div>
+        <div class="post--foot">
+          <div class="comments">
+
+
+            {{!> disqus }}
+
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </article>
+</div>
+{{/post}}
