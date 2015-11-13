@@ -27,8 +27,11 @@
   {{/author}}
   <div class="share">
       <h5 class="title">Поделиться постом</h5>   
- <a class="twitter-timeline" href="https://twitter.com/disciplina_ru" data-widget-id="664797106520129536">Твиты от @disciplina_ru</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+ <a class="share--icon twitter" href="https://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}"
+          onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+          <i class="fa fa-twitter"></i> <span>Share</span>
+      </a>
+
       <a class="share--icon facebook" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
           onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
           <i class="fa fa-facebook"></i> <span>Share</span>
@@ -95,7 +98,8 @@
 
   <div class="twitter-time">
     <h5 class="title">Последние твиты</h5>
-    <a class="twitter-timeline" href="https://twitter.com/disciplina_ru" data-widget-id="625390302241660928">Tweets por el @disciplina.</a>
+    <div style="border:3px solid #993633; border-radius:10px; margin-left:-25px;">
+<a class="twitter-timeline" href="https://twitter.com/disciplina_ru" data-widget-id="664797106520129536">Твиты от @disciplina_ru</a></div>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
   </div>
   {{!<div id="instafeed"></div>
