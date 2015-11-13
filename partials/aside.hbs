@@ -1,7 +1,6 @@
 ﻿<aside>
   {{#is "post"}}
   {{#author}}
-ААААААААААААААААААА
   <div class="author">
       <hr>
       <h5 class="title">Об авторе</h5>
@@ -32,7 +31,7 @@
           onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
           <i class="fa fa-twitter"></i> <span>Share</span>
       </a>
-ББББББББББББББББББББББББББББББ
+
       <a class="share--icon facebook" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
           onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
           <i class="fa fa-facebook"></i> <span>Share</span>
@@ -70,7 +69,6 @@
 
   {{/is}}
 
-ВВВВВВВВВВВВВВВВВВВВВВВВВВВВВВ
 
   {{^is "post"}}
   <div class="blog">
@@ -78,7 +76,7 @@
     <h5 class="title" style="margin-top:0;">Про блог</h5>
     {{#if @blog.logo}}
     <figure class="blog--logo">
-        <a class="img" href="{{url}}">
+        <a class="img" href="http://disciplina.ru">
           <img src="{{@blog.logo}}" alt="{{@blog.title}}"/>
         </a>
     </figure>
@@ -89,7 +87,7 @@
     {{/if}}
     <hr>
   </div>
-ГГГГГГГГГГГГГГГГГГГГГГГГГГГГ
+
 
   {{!> active-social}}
 
@@ -103,7 +101,7 @@
     <div style="border:3px solid #993633; border-radius:10px; margin-left:-325px;">
 <a class="twitter-timeline" href="https://twitter.com/disciplina_ru" data-widget-id="664797106520129536">Твиты от @disciplina_ru</a>
 	</div>
-ДДДДДДДДДДДДДДДДДДДДДДДДДДДДДДДДДДДДДДДДДДДДДДДДДДДДДДДДДДД
+
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
   </div>
   {{!<div id="instafeed"></div>
